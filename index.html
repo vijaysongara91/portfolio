@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!-- 
+  DOCTYPE tells the browser this is an HTML5 file.
+  This is always the FIRST line of any HTML file.
+-->
+<html lang="en">
+<head>
+  <!-- head section: things that are NOT visible on screen, but the browser needs -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ↑ this line is required for mobile responsiveness. Without it, mobile will show a zoomed-out page -->
+  <title>Vijay Songara | Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Vijay Songara - Aspiring Full-Stack Developer" />
+
+  <!-- Google Fonts: a coding font (JetBrains Mono) and a clean font (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons via Font Awesome (loaded from CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Linking our own CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================= -->
+  <!-- 1) TOP TAB BAR — VS Code style navigation -->
+  <!-- ============================================= -->
+  <nav class="tabbar" id="tabbar">
+    <div class="tabbar-left">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="logo">VS<span class="logo-accent">.dev</span></span>
+    </div>
+    <ul class="tabs">
+      <li><a href="#home" class="tab active">index</a></li>
+      <li><a href="#about" class="tab">about</a></li>
+      <li><a href="#skills" class="tab">skills</a></li>
+      <li><a href="#projects" class="tab">projects</a></li>
+      <li><a href="#contact" class="tab">contact</a></li>
+    </ul>
+    <a href="resume.pdf" download class="resume-btn">
+      <i class="fa-solid fa-download"></i> Resume
+    </a>
+    <!-- Mobile hamburger menu button -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  
+  <header class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow"> Hello World, my name is</p>
+      <h1 class="hero-name">Vijay Songara</h1>
+
+      <!-- Terminal-style box where the typing effect runs (via JS) -->
+      <div class="terminal-box">
+        <div class="terminal-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">vijay@portfolio: ~</span>
+        </div>
+        <div class="terminal-body">
+          <span class="prompt">$</span>
+          <span id="typed-text"></span><span class="cursor-blink">|</span>
+        </div>
+      </div>
+
+      <p class="hero-tagline">Aspiring Full-Stack Developer | Building Clean &amp; User-Friendly Web Experiences</p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Connect</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://github.com/vijaysongara91" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vijay-songara/?isSelfProfile=false" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mail to:songara862@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </header>
+
+  <section class="section" id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-grid reveal">
+      <div class="about-card-img">
+        <div class="img-frame">
+          <img src="photo.jpg" alt="Vijay Songara">
+          <!-- Replace this with your real photo: <img src="photo.jpg" alt="Vijay Songara"> -->
+        </div>
+      </div>
+      <div class="about-text">
+        <p>
+          Hi! I'm <strong>Vijay Songara</strong>, an aspiring
+          <strong>Full-Stack Developer</strong> who believes in building clean,
+          fast, and user-friendly web experiences. I enjoy solving new problems
+          and turning them into practical, working solutions.
+        </p>
+        <p>
+          I'm building my skills starting from HTML, CSS, and JavaScript, and
+          working my way up to modern frameworks — with every project, I aim to
+          write code that's cleaner, more readable, and more scalable.
+        </p>
+
+        <div class="about-info">
+          <div><span>Name:</span> Vijay Songara</div>
+          <div><span>Role:</span> Full-Stack Developer</div>
+          <div><span>Based in:</span> India</div>
+          <div><span>Status:</span> Open to Opportunities</div>
+        </div>
+
+        <a href="resume.pdf" download class="btn btn-primary">
+          <i class="fa-solid fa-download"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="skills">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="skills-grid reveal">
+      <div class="skill-item">
+        <div class="skill-head"><span>HTML5</span><span>90%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span>CSS3</span><span>85%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span>JavaScript</span><span>75%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span>React.js</span><span>65%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-width="65"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span>Node.js</span><span>60%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-width="60"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-head"><span>Git &amp; GitHub</span><span>80%</span></div>
+        <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+      </div>
+    </div>
+
+    <div class="tools-strip reveal">
+      <span><i class="fa-brands fa-html5"></i> HTML</span>
+      <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+      <span><i class="fa-brands fa-js"></i> JavaScript</span>
+      <span><i class="fa-brands fa-react"></i> React</span>
+      <span><i class="fa-brands fa-node-js"></i> Node</span>
+      <span><i class="fa-brands fa-git-alt"></i> Git</span>
+      <span><i class="fa-brands fa-figma"></i> python </span>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="projects-grid reveal">
+      <article class="project-card">
+        <div class="project-top">
+          <i class="fa-solid fa-folder-open"></i>
+          <div class="project-links">
+            <a href="#" target="_blank" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            <a href="#" target="_blank" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <h3>Advanced Image Gallery</h3>
+        <p>Lazy-loading image gallery with category filters and a smooth lightbox popup, built using vanilla JS.</p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+      </article>
+
+      <!-- Project Card 2 -->
+      <article class="project-card">
+        <div class="project-top">
+          <i class="fa-solid fa-folder-open"></i>
+          <div class="project-links">
+            <a href="#" target="_blank" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            <a href="#" target="_blank" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <h3>Smart Calculator</h3>
+        <p>A keyboard-supported calculator with dark/light theme switcher and a history log of past calculations.</p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+      </article>
+
+      <!-- Project Card 3 -->
+      <article class="project-card">
+        <div class="project-top">
+          <i class="fa-solid fa-folder-open"></i>
+          <div class="project-links">
+            <a href="#" target="_blank" aria-label="GitHub repo"><i class="fa-brands fa-github"></i></a>
+            <a href="#" target="_blank" aria-label="Live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <h3>This Portfolio Website</h3>
+        <p>A VS Code inspired, fully responsive personal portfolio with scroll animations and a contact form.</p>
+        <div class="project-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+      </article>
+
+      <!-- Featured Concept Card -->
+      <article class="project-card project-card-featured">
+        <div class="project-top">
+          <i class="fa-solid fa-seedling"></i>
+          <span class="badge">Concept / In Progress</span>
+        </div>
+        <h3>Kisan AI Dashboard</h3>
+        <p>A UI mockup for an AI-powered dashboard that helps farmers track crop health, weather, and market prices — exploring how tech can solve real-world problems.</p>
+        <div class="project-tags">
+          <span>UI/UX</span><span>AI Concept</span><span>Figma</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <h2 class="section-title">Let's Connect</h2>
+
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <p>Got a job opportunity, a project collaboration idea, or just want to say hi —
+        my inbox is always open. Reach out through the form below or directly.</p>
+
+        <a class="contact-line" href="mailto:songara862@gmail.com">
+          <i class="fa-solid fa-envelope"></i> songara862@gmail.com
+        </a>
+        <a class="contact-line" href="https://www.linkedin.com/in/vijay-songara/?isSelfProfile=false" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> linkedin.com/in/vijaysongara
+        </a>
+        <a class="contact-line" href="https://github.com/vijaysongara91" target="_blank">
+          <i class="fa-brands fa-github"></i> github.com/vijaysongara
+        </a>
+      </div>
+
+      <!-- NOTE: This form is frontend-only for now (no data is saved anywhere).
+           To make it work for real, connect it to a free service like Formspree/EmailJS. -->
+      <form class="contact-form" id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+
+        <button type="submit" class="btn btn-primary">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Designed &amp; built by Vijay Songara &mdash; <span id="year"></span></p>
+  </footer>
+
+  <!-- Linking our JS file last, so the HTML loads first -->
+  <script src="script.js"></script>
+</body>
+</html>
