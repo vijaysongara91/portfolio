@@ -1,32 +1,21 @@
 <!DOCTYPE html>
-<!-- 
-  DOCTYPE tells the browser this is an HTML5 file.
-  This is always the FIRST line of any HTML file.
--->
 <html lang="en">
 <head>
-  <!-- head section: things that are NOT visible on screen, but the browser needs -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- ↑ this line is required for mobile responsiveness. Without it, mobile will show a zoomed-out page -->
   <title>Vijay Songara | Full-Stack Developer</title>
   <meta name="description" content="Portfolio of Vijay Songara - Aspiring Full-Stack Developer" />
 
-  <!-- Google Fonts: a coding font (JetBrains Mono) and a clean font (Inter) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Icons via Font Awesome (loaded from CDN) -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Linking our own CSS file -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ============================================= -->
-  <!-- 1) TOP TAB BAR — VS Code style navigation -->
-  <!-- ============================================= -->
   <nav class="tabbar" id="tabbar">
     <div class="tabbar-left">
       <span class="dot red"></span>
@@ -44,7 +33,6 @@
     <a href="resume.pdf" download class="resume-btn">
       <i class="fa-solid fa-download"></i> Resume
     </a>
-    <!-- Mobile hamburger menu button -->
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -57,7 +45,7 @@
       <p class="hero-eyebrow"> Hello World, my name is</p>
       <h1 class="hero-name">Vijay Songara</h1>
 
-      <!-- Terminal-style box where the typing effect runs (via JS) -->
+      
       <div class="terminal-box">
         <div class="terminal-header">
           <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
@@ -94,7 +82,6 @@
       <div class="about-card-img">
         <div class="img-frame">
           <img src="photo.jpg" alt="Vijay Songara">
-          <!-- Replace this with your real photo: <img src="photo.jpg" alt="Vijay Songara"> -->
         </div>
       </div>
       <div class="about-text">
@@ -215,8 +202,6 @@
           <span>HTML</span><span>CSS</span><span>JavaScript</span>
         </div>
       </article>
-
-      <!-- Featured Concept Card -->
       <article class="project-card project-card-featured">
         <div class="project-top">
           <i class="fa-solid fa-seedling"></i>
@@ -250,9 +235,6 @@
           <i class="fa-brands fa-github"></i> github.com/vijaysongara
         </a>
       </div>
-
-      <!-- NOTE: This form is frontend-only for now (no data is saved anywhere).
-           To make it work for real, connect it to a free service like Formspree/EmailJS. -->
       <form class="contact-form" id="contactForm">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -274,8 +256,6 @@
   <footer class="footer">
     <p>Designed &amp; built by Vijay Songara &mdash; <span id="year"></span></p>
   </footer>
-
-  <!-- Linking our JS file last, so the HTML loads first -->
   <script src="script.js"></script>
 </body>
 </html>

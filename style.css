@@ -1,16 +1,11 @@
-/* =========================================================
-   DESIGN TOKENS — All colors/fonts in one place, so changing
-   the theme later is easy. These ":root" variables are used
-   throughout the whole file.
-========================================================= */
 :root {
-  --bg: #0B0E14;          /* main dark background */
-  --surface: #131826;     /* card/section background, slightly lighter */
-  --surface-2: #1A2032;   /* tab bar / borders */
-  --text: #E8EAF0;        /* main text color */
-  --text-dim: #8B93A7;    /* secondary/dim text */
-  --accent: #FFB454;      /* amber - primary accent (buttons, highlights) */
-  --accent-2: #4ECDC4;    /* teal - secondary accent */
+  --bg: #0B0E14;    
+  --surface: #131826;     
+  --surface-2: #1A2032;   
+  --text: #E8EAF0;        
+  --text-dim: #8B93A7;    
+  --accent: #FFB454;      
+  --accent-2: #4ECDC4;   
   --danger: #FF6B6B;
   --font-mono: 'JetBrains Mono', monospace;
   --font-sans: 'Inter', sans-serif;
@@ -18,18 +13,14 @@
   --max-width: 1100px;
 }
 
-/* =========================================================
-   RESET — removes each browser's default margin/padding so
-   the design looks the same across all browsers
-========================================================= */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* padding/border are counted inside the width, not added on top */
+  box-sizing: border-box; 
 }
 
 html {
-  scroll-behavior: smooth; /* smooth scroll when a nav link is clicked */
+  scroll-behavior: smooth; 
 }
 
 body {
@@ -37,14 +28,13 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   line-height: 1.6;
-  overflow-x: hidden; /* never show a horizontal scrollbar */
+  overflow-x: hidden; 
 }
 
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-/* Reusable container width */
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -65,10 +55,6 @@ img { max-width: 100%; display: block; }
   font-weight: 800;
   margin-bottom: 48px;
 }
-
-/* =========================================================
-   TOP TAB BAR (VS Code style navigation)
-========================================================= */
 .tabbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -138,9 +124,6 @@ img { max-width: 100%; display: block; }
 }
 .hamburger span { width: 22px; height: 2px; background: var(--text); }
 
-/* =========================================================
-   HERO SECTION
-========================================================= */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -153,7 +136,6 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-/* Background grid pattern - subtle, terminal/code feel */
 .hero-bg-grid {
   position: absolute;
   inset: 0;
@@ -183,7 +165,6 @@ img { max-width: 100%; display: block; }
   -webkit-text-fill-color: transparent;
 }
 
-/* Terminal box - signature element */
 .terminal-box {
   background: var(--surface);
   border: 1px solid #252C40;
@@ -272,10 +253,6 @@ img { max-width: 100%; display: block; }
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(8px); }
 }
-
-/* =========================================================
-   ABOUT SECTION
-========================================================= */
 .about-grid {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -309,9 +286,6 @@ img { max-width: 100%; display: block; }
 }
 .about-info span { color: var(--accent-2); }
 
-/* =========================================================
-   SKILLS SECTION
-========================================================= */
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -333,7 +307,7 @@ img { max-width: 100%; display: block; }
 }
 .skill-fill {
   height: 100%;
-  width: 0%; /* JS animates this to the actual % value */
+  width: 0%; 
   background: linear-gradient(90deg, var(--accent-2), var(--accent));
   border-radius: 4px;
   transition: width 1.4s ease;
@@ -356,10 +330,6 @@ img { max-width: 100%; display: block; }
   align-items: center;
   gap: 8px;
 }
-
-/* =========================================================
-   PROJECTS SECTION
-========================================================= */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -410,9 +380,6 @@ img { max-width: 100%; display: block; }
   border-radius: 10px;
 }
 
-/* =========================================================
-   CONTACT SECTION
-========================================================= */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -466,9 +433,6 @@ img { max-width: 100%; display: block; }
   min-height: 18px;
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
 .footer {
   text-align: center;
   padding: 30px;
@@ -478,9 +442,6 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--surface-2);
 }
 
-/* =========================================================
-   SCROLL REVEAL ANIMATION (JS adds the .visible class)
-========================================================= */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -491,19 +452,13 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
 }
 
-/* =========================================================
-   ACCESSIBILITY: keyboard focus must always be visible
-========================================================= */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-/* =========================================================
-   RESPONSIVE — MOBILE (for smaller screens)
-========================================================= */
 @media (max-width: 800px) {
-  .tabs { display: none; } /* tabs are hidden on mobile, hamburger shows instead */
+  .tabs { display: none; } 
   .hamburger { display: flex; }
   .resume-btn { display: none; }
 
@@ -514,8 +469,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .skills-grid { grid-template-columns: 1fr; }
   .section { padding: 70px 20px; }
 }
-
-/* Mobile slide-down menu, shown when the hamburger is clicked */
 .tabs.mobile-open {
   display: flex;
   flex-direction: column;
